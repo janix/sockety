@@ -24,4 +24,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: /Users/runner/work/sockety/sockety
+        path: /Users/runner/work/sockety/sockety/build
