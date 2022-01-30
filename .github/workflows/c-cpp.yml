@@ -42,3 +42,16 @@ jobs:
         name: ubuntu-x64
         path: /home/runner/work/sockety/sockety/build
         
+
+  windows-latest-build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: check directory location
+      run: pwd
+    - name: list files
+      run: ls -laGh
+    - name: nmake
+      run: nmake
