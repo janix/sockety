@@ -56,7 +56,7 @@ jobs:
         #vs-prerelease: # optional
         #msbuild-architecture: # optional, default is x86
     - name: check vs directory
-      run: ls "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools"
+      run: tree "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools"
     #- uses: actions/checkout@v2
     - name: check directory location
       run: pwd
