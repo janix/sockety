@@ -7,7 +7,7 @@ objects = server client http_server http_client
 all: $(objects)
 
 $(objects):
-	$(CC) $(CFLAGS) $@.c -o build/$@
+	$(CC) $(CFLAGS) $@.c -o $@
 
 clean:
 	rm -rf build/*
