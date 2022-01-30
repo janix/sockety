@@ -40,4 +40,5 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: ubuntu-x64
-        path: /Users/runner/work/sockety/sockety/build
+        path: /home/runner/work/sockety/sockety/build
+        
