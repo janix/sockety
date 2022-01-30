@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  macos-latest-build:
 
     runs-on: macos-latest
 
@@ -21,4 +21,7 @@ jobs:
       run: pwd
     - name: list files
       run: ls -laGh
-  
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: /Users/runner/work/sockety/sockety
