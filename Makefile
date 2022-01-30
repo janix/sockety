@@ -2,7 +2,7 @@ CC = cc
 CFLAGS = -std=c99 -pedantic -Wall
 objects = server client http_server http_client
 
-$(shell mkdir build)
+mkdir build
 
 all: $(objects)
 
