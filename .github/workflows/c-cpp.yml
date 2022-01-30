@@ -24,10 +24,13 @@ jobs:
       - name: list generated files
         working-directory: ./build
         run: ls -laGh
-      - name: check directory location
+      - name: make build
         working-directory: ./build
-        run: pwd
+        run: make all
+      - name: check generated files
+        working-directory: ./build/bin
+        run: ls -laGh
       - uses: actions/upload-artifact@v2
         with:
           name: macOS-x64
-          path: /Users/runner/work/sockety/sockety/build
+          path: /Users/runner/work/sockety/sockety/build/bin
