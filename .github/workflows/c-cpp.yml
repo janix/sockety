@@ -56,4 +56,4 @@ jobs:
     - name: list files
       run: ls
     - name: nmake
-      run: nmake
+      run: nmake /f build.mak
