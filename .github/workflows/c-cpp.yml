@@ -7,38 +7,53 @@ on:
     branches: [ main ]
 
 jobs:
-  macos-latest-build:
+#  macos-latest-build:
+#
+#    runs-on: macos-latest
+#
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: make (all)
+#      run: make
+#    - name: check directory location
+#      run: pwd
+#    - name: list files
+#      run: ls -laGh
+#    - uses: actions/upload-artifact@v2
+#      with:
+#        name: macOS-x64
+#        path: /Users/runner/work/sockety/sockety/build
+        
+        
+#  ubuntu-latest-build:
+#
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: make (all)
+#      run: make
+#    - name: check directory location
+#      run: pwd
+#    - name: list files
+#      run: ls -laGh
+#    - uses: actions/upload-artifact@v2
+#      with:
+#        name: ubuntu-x64
+#        path: /home/runner/work/sockety/sockety/build
+        
 
-    runs-on: macos-latest
+  windows-latest-build:
+
+    runs-on: windows-latest
 
     steps:
+    - name: Enable Developer Command Prompt
+      uses: ilammy/msvc-dev-cmd@v1.10.0
     - uses: actions/checkout@v2
-    - name: make (all)
-      run: make
     - name: check directory location
       run: pwd
     - name: list files
-      run: ls -laGh
-    - uses: actions/upload-artifact@v2
-      with:
-        name: macOS-x64
-        path: /Users/runner/work/sockety/sockety/build
-        
-        
-  ubuntu-latest-build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: make (all)
-      run: make
-    - name: check directory location
-      run: pwd
-    - name: list files
-      run: ls -laGh
-    - uses: actions/upload-artifact@v2
-      with:
-        name: ubuntu-x64
-        path: /home/runner/work/sockety/sockety/build
-        
+      run: ls
+    - name: nmake
+      run: nmake
