@@ -1,0 +1,8 @@
+/Library//Developer/CommandLineTools/usr/include/c++/v1/stdio.h
+/Library//Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/stdio.h
+/Library//Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/stdio.h
+/Library//Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/stdio.h
+/Library//Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys/stdio.h
+/Library//Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/sys/stdio.h
+/Library//Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/stdio.h
+/Library//Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/sys/stdio.h
