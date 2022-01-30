@@ -23,3 +23,21 @@ jobs:
       with:
         name: macOS-x64
         path: /Users/runner/work/sockety/sockety/build
+        
+        
+  ubuntu-latest-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: make (all)
+      run: make
+    - name: check directory location
+      run: pwd
+    - name: list files
+      run: ls -laGh
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ubuntu-x64
+        path: /Users/runner/work/sockety/sockety/build
