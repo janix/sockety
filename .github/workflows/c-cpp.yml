@@ -52,6 +52,6 @@ jobs:
     - name: check directory location
       run: pwd
     - name: list files
-      run: ls -laGh
+      run: ls
     - name: nmake
       run: nmake
