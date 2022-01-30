@@ -1,11 +1,13 @@
 CC = cc
-CFLAGS = -std=c99 -pedantic -Wall -arch=arm64
+CFLAGS = -std=c99 -pedantic -Wall
 objects = server client http_server http_client
+
+#$(info $(objects))
 
 all: $(objects)
 
 $(objects):
-	$(CC) $(CFLAGS)  -o build/$@ $@.c
+	$(CC) $(CFLAGS) $@.c -o build/$@
 
 clean:
 	rm -rf build/*
