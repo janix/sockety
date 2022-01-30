@@ -4,8 +4,8 @@ objects = server client http_server http_client
 
 all: $(objects)
 
-$(objects): %: %.c
-	$(CC) $(CFLAGS)  -o build/$@ $<
+$(objects):
+	$(CC) $(CFLAGS)  -o build/$@ $@.c
 
 clean:
 	rm -rf build/*
