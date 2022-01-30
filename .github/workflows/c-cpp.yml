@@ -48,19 +48,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: setup-msbuild
-      uses: microsoft/setup-msbuild@v1.1
-      #with:
-        #vswhere-path: # optional
-        #vs-version: # optional
-        #vs-prerelease: # optional
-        #msbuild-architecture: # optional, default is x86
-    - name: check vs directory
-      run: tree "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools"
-    #- uses: actions/checkout@v2
+    - name: Enable Developer Command Prompt
+      uses: ilammy/msvc-dev-cmd@v1.10.0
+    - uses: actions/checkout@v2
     - name: check directory location
       run: pwd
-    #- name: list files
-    #  run: ls
-    #- name: nmake
-    #  run: nmake
+    - name: list files
+      run: ls
+    - name: nmake
+      run: nmake
