@@ -1,7 +1,2 @@
-
-.vs/VSWorkspaceState.json
-.vs/ProjectSettings.json
-.vs/slnx.sqlite
-.vs/sockety/project-colors.json
-.vs/sockety/v17/.suo
-.vs/sockety/v17/Browse.VC.db
+.vs
+.vscode
