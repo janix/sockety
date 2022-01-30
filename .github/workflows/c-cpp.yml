@@ -17,7 +17,7 @@ jobs:
       - name: list files
         run: ls -laGh
       - name: mkdir build
-        run: mkdir -P build
+        run: mkdir -p build
       - name: cd build
         run: cd build
       - name: run cmake
