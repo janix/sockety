@@ -7,40 +7,40 @@ on:
     branches: [ main ]
 
 jobs:
-  macos-latest-build:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: make (all)
-      run: make
-    - name: check directory location
-      run: pwd
-    - name: list files
-      run: ls -laGh
-    - uses: actions/upload-artifact@v2
-      with:
-        name: macOS-x64
-        path: /Users/runner/work/sockety/sockety/build
+#  macos-latest-build:
+#
+#    runs-on: macos-latest
+#
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: make (all)
+#      run: make
+#    - name: check directory location
+#      run: pwd
+#    - name: list files
+#      run: ls -laGh
+#    - uses: actions/upload-artifact@v2
+#      with:
+#        name: macOS-x64
+#        path: /Users/runner/work/sockety/sockety/build
         
         
-  ubuntu-latest-build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: make (all)
-      run: make
-    - name: check directory location
-      run: pwd
-    - name: list files
-      run: ls -laGh
-    - uses: actions/upload-artifact@v2
-      with:
-        name: ubuntu-x64
-        path: /home/runner/work/sockety/sockety/build
+#  ubuntu-latest-build:
+#
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: make (all)
+#      run: make
+#    - name: check directory location
+#      run: pwd
+#    - name: list files
+#      run: ls -laGh
+#    - uses: actions/upload-artifact@v2
+#      with:
+#        name: ubuntu-x64
+#        path: /home/runner/work/sockety/sockety/build
         
 
   windows-latest-build:
@@ -55,7 +55,9 @@ jobs:
         #vs-version: # optional
         #vs-prerelease: # optional
         #msbuild-architecture: # optional, default is x86
-    - uses: actions/checkout@v2
+    - name: check vs directory
+      run: ls "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise"
+    #- uses: actions/checkout@v2
     - name: check directory location
       run: pwd
     - name: list files
