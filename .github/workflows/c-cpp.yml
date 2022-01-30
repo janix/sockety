@@ -34,3 +34,31 @@ jobs:
         with:
           name: macOS-x64
           path: /Users/runner/work/sockety/sockety/build/bin
+
+  Ubuntu-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: snickerbockers/cmake-configure@prerel1
+      - uses: actions/checkout@v2
+      - name: check directory location
+        run: pwd
+      - name: list files
+        run: ls -laGh
+      - name: mkdir build
+        run: mkdir -p build
+      - name: run cmake
+        working-directory: ./build
+        run: cmake ../
+      - name: list generated files
+        working-directory: ./build
+        run: ls -laGh
+      - name: make build
+        working-directory: ./build
+        run: make all
+      - name: check generated files
+        working-directory: ./build/bin
+        run: ls -laGh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Ubuntu-x64
+          path: /home/runner/work/sockety/sockety/build/bin
