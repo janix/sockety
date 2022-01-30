@@ -10,7 +10,7 @@ jobs:
   macOS-build:
     runs-on: macos-latest
     steps:
-      - uses: snickerbockers/cmake-configure@prerel1
+#      - uses: snickerbockers/cmake-configure@prerel1
       - uses: actions/checkout@v2
       - name: check directory location
         run: pwd
@@ -20,12 +20,14 @@ jobs:
         run: mkdir -p build
       - name: cd build
         run: cd build
-      - name: run cmake
-        run: cmake ../
-      - name: list generated files
-        run: ls -laGh
-      - name: check directory location
+      - name: check build location
         run: pwd
+#      - name: run cmake
+#        run: cmake ../
+#      - name: list generated files
+#        run: ls -laGh
+#      - name: check directory location
+#        run: pwd
 #     - uses: actions/upload-artifact@v2
 #       with:
 #        name: macOS-x64
