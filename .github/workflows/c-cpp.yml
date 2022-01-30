@@ -48,6 +48,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1.1
+      #with:
+        #vswhere-path: # optional
+        #vs-version: # optional
+        #vs-prerelease: # optional
+        #msbuild-architecture: # optional, default is x86
     - uses: actions/checkout@v2
     - name: check directory location
       run: pwd
