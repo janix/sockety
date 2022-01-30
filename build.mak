@@ -1,7 +1,5 @@
 # Sample makefile
 
-!include <win32.mak>
-
 all: server.exe client.exe http_server.exe http_client.exe
 
 .c.obj:
